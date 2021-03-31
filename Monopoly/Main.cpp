@@ -13,4 +13,6 @@ int main()
 		gameplay->MusikStart();
 		gameplay->Playing();
 	}
+
+	cout << "Hello world" << endl;
 }
