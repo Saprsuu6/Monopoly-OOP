@@ -15,4 +15,6 @@ int main()
 	}
 
 	cout << "Hello world" << endl;
+
+	cout << "it's final" << endl;
 }
