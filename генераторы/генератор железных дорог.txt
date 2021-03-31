@@ -1,0 +1,98 @@
+ofstream out("Propertyes\\Stations.dll", ios::binary);
+
+	if (out.is_open())
+	{
+		string ystr = "Rl. Station #1";
+		int ysize = ystr.size();
+		out.write((char*)&ysize, sizeof(int));
+		out.write(ystr.c_str(), ysize);
+
+		int ycolour = 7;
+		out.write((char*)&ycolour, sizeof(int));
+
+		int yprice = 200;
+		out.write((char*)&yprice, sizeof(int));
+
+		int yrent[4] = { 25, 50, 100, 200 };
+		for (int i = 0; i < 4; i++)
+		{
+			out.write((char*)&yrent[i], sizeof(int));
+		}
+
+		int ycollateralValue = 100;
+		out.write((char*)&ycollateralValue, sizeof(int));
+
+
+
+
+
+		string ustr = "Rl. Station #2";
+		int usize = ustr.size();
+		out.write((char*)&usize, sizeof(int));
+		out.write(ustr.c_str(), usize);
+
+		int ucolour = 7;
+		out.write((char*)&ucolour, sizeof(int));
+
+		int uprice = 200;
+		out.write((char*)&uprice, sizeof(int));
+
+		int urent[4] = { 25, 50, 100, 200 };
+		for (int i = 0; i < 4; i++)
+		{
+			out.write((char*)&urent[i], sizeof(int));
+		}
+
+		int ucollateralValue = 100;
+		out.write((char*)&ucollateralValue, sizeof(int));
+
+
+
+
+
+		string istr = "Rl. Station #3";
+		int isize = istr.size();
+		out.write((char*)&isize, sizeof(int));
+		out.write(istr.c_str(), isize);
+
+		int icolour = 7;
+		out.write((char*)&icolour, sizeof(int));
+
+		int iprice = 200;
+		out.write((char*)&iprice, sizeof(int));
+
+		int irent[4] = { 25, 50, 100, 200 };
+		for (int i = 0; i < 4; i++)
+		{
+			out.write((char*)&irent[i], sizeof(int));
+		}
+
+		int icollateralValue = 100;
+		out.write((char*)&icollateralValue, sizeof(int));
+
+
+
+
+
+		string ostr = "Rl. Station #4";
+		int osize = ostr.size();
+		out.write((char*)&osize, sizeof(int));
+		out.write(ostr.c_str(), osize);
+
+		int ocolour = 7;
+		out.write((char*)&ocolour, sizeof(int));
+
+		int oprice = 200;
+		out.write((char*)&oprice, sizeof(int));
+
+		int orent[4] = { 25, 50, 100, 200 };
+		for (int i = 0; i < 4; i++)
+		{
+			out.write((char*)&orent[i], sizeof(int));
+		}
+
+		int ocollateralValue = 100;
+		out.write((char*)&ocollateralValue, sizeof(int));
+	}
+
+	out.close();

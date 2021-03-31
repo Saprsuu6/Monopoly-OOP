@@ -1,0 +1,122 @@
+ofstream out("Propertyes\\Streets.dll", ios::binary);
+
+	if (out.is_open())
+	{
+		string qstr = "Grove Street Families";
+		int qsize = qstr.size();
+		out.write((char*)&qsize, sizeof(int));
+		out.write(qstr.c_str(), qsize);
+
+		int qcolour = 2;
+		out.write((char*)&qcolour, sizeof(int));
+
+		int qprice = 60;
+		out.write((char*)&qprice, sizeof(int));
+
+		int qrent[6] = { 2, 10, 30, 90, 160, 250 };
+		for (int i = 0; i < 6; i++)
+		{
+			out.write((char*)&qrent[i], sizeof(int));
+		}
+
+		int qcollateralValue = 30;
+		out.write((char*)&qcollateralValue, sizeof(int));
+
+
+
+
+
+		string wstr = "Ballas";
+		int wsize = wstr.size();
+		out.write((char*)&wsize, sizeof(int));
+		out.write(wstr.c_str(), wsize);
+
+		int wcolour = 5;
+		out.write((char*)&wcolour, sizeof(int));
+
+		int wprice = 100;
+		out.write((char*)&wprice, sizeof(int));
+
+		int wrent[6] = { 6, 30, 90, 270, 400, 550 };
+		for (int i = 0; i < 6; i++)
+		{
+			out.write((char*)&wrent[i], sizeof(int));
+		}
+
+		int wcollateralValue = 50;
+		out.write((char*)&wcollateralValue, sizeof(int));
+
+
+
+
+
+		string estr = "Los Santos Vagos";
+		int esize = estr.size();
+		out.write((char*)&esize, sizeof(int));
+		out.write(estr.c_str(), esize);
+
+		int ecolour = 6;
+		out.write((char*)&ecolour, sizeof(int));
+
+		int eprice = 140;
+		out.write((char*)&eprice, sizeof(int));
+
+		int erent[6] = { 12, 60, 180, 500, 700, 900 };
+		for (int i = 0; i < 6; i++)
+		{
+			out.write((char*)&erent[i], sizeof(int));
+		}
+
+		int ecollateralValue = 80;
+		out.write((char*)&ecollateralValue, sizeof(int));
+
+
+
+
+
+		string rstr = "San Fierro Rifa";
+		int rsize = rstr.size();
+		out.write((char*)&rsize, sizeof(int));
+		out.write(rstr.c_str(), rsize);
+
+		int rcolour = 3;
+		out.write((char*)&rcolour, sizeof(int));
+
+		int rprice = 220;
+		out.write((char*)&rprice, sizeof(int));
+
+		int rrent[6] = { 20, 100, 300, 750, 925, 1100 };
+		for (int i = 0; i < 6; i++)
+		{
+			out.write((char*)&rrent[i], sizeof(int));
+		}
+
+		int rcollateralValue = 120;
+		out.write((char*)&rcollateralValue, sizeof(int));
+
+
+
+
+
+		string tstr = "San Fierro Triads";
+		int tsize = tstr.size();
+		out.write((char*)&tsize, sizeof(int));
+		out.write(tstr.c_str(), tsize);
+
+		int tcolour = 4;
+		out.write((char*)&tcolour, sizeof(int));
+
+		int tprice = 260;
+		out.write((char*)&tprice, sizeof(int));
+
+		int trent[6] = { 22, 110, 330, 800, 975, 1150 };
+		for (int i = 0; i < 6; i++)
+		{
+			out.write((char*)&trent[i], sizeof(int));
+		}
+
+		int tcollateralValue = 130;
+		out.write((char*)&tcollateralValue, sizeof(int));
+	}
+
+	out.close();
