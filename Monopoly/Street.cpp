@@ -13,17 +13,12 @@ void Street::SetRent(const int* rent)
 {
 	if (rent != nullptr)
 	{
-		_rent = new int[Street::amountProperty];
+		_rent = new int[amountProperty];
 		for (int i = 0; i < amountProperty; i++)
 		{
 			_rent[i] = rent[i];
 		}
 	}
-}
-
-void Street::LayDown()
-{
-	_isLaidDown = true;
 }
 
 void Street::BuildHouse()
@@ -45,11 +40,6 @@ void Street::DestroyHouse()
 int Street::GetAmountHouses() const
 {
 	return _amountHouse;
-}
-
-Street* Street::GetStreet()
-{
-	return this;
 }
 
 int Street::GetAmountProperties() const

@@ -174,44 +174,44 @@ void GameEngine::ShowingCard()
 	switch (random)
 	{
 	case (1):
-		_property = _propertyBase->GetStreetArr()[0].GetStreet();
+		_property = _propertyBase->GetStreetArr()[0].GetProperty();
 		_show.SetProperty(_property);
 		_show.ShowStreet(Colours::DarkGreen);
 		break;
 	case (2):
-		_property = _propertyBase->GetStreetArr()[1].GetStreet();
+		_property = _propertyBase->GetStreetArr()[1].GetProperty();
 		_show.SetProperty(_property);
 		_show.ShowStreet(Colours::DarkPink);
 		break;
 	case (3):
-		_property = _propertyBase->GetStreetArr()[2].GetStreet();
+		_property = _propertyBase->GetStreetArr()[2].GetProperty();
 		_show.SetProperty(_property);
 		_show.ShowStreet(Colours::DarkYellow);
 		break;
 	case (4):
-		_property = _propertyBase->GetStreetArr()[3].GetStreet();
+		_property = _propertyBase->GetStreetArr()[3].GetProperty();
 		_show.SetProperty(_property);
 		_show.ShowStreet(Colours::Cyan);
 		break;
 	case (5):
-		_property = _propertyBase->GetStreetArr()[4].GetStreet();
+		_property = _propertyBase->GetStreetArr()[4].GetProperty();
 		_show.SetProperty(_property);
 		_show.ShowStreet(Colours::DarkRed);
 		break;
 	case (6):
-		_property = _propertyBase->GetRailwayArr()[0].GetRailway();
+		_property = _propertyBase->GetRailwayArr()[0].GetProperty();
 		_show.SetProperty(_property);
 		break;
 	case (7):
-		_property = _propertyBase->GetRailwayArr()[1].GetRailway();
+		_property = _propertyBase->GetRailwayArr()[1].GetProperty();
 		_show.SetProperty(_property);
 		break;
 	case (8):
-		_property = _propertyBase->GetRailwayArr()[2].GetRailway();
+		_property = _propertyBase->GetRailwayArr()[2].GetProperty();
 		_show.SetProperty(_property);
 		break;
 	case (9):
-		_property = _propertyBase->GetRailwayArr()[3].GetRailway();
+		_property = _propertyBase->GetRailwayArr()[3].GetProperty();
 		_show.SetProperty(_property);
 		break;
 	case (10):

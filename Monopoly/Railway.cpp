@@ -13,22 +13,12 @@ void Railway::SetRent(const int* rent)
 {
 	if (rent != nullptr)
 	{
-		_rent = new int[Railway::amountProperty];
+		_rent = new int[amountProperty];
 		for (int i = 0; i < amountProperty; i++)
 		{
 			_rent[i] = rent[i];
 		}
 	}
-}
-
-void Railway::LayDown()
-{
-	_isLaidDown = true;
-}
-
-Railway* Railway::GetRailway()
-{
-	return this;
 }
 
 int Railway::GetAmountProperties() const

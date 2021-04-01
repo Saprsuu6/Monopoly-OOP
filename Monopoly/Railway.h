@@ -1,6 +1,9 @@
 #pragma once
 class Railway : public Property
 {
+private:
+	static const int amountProperty;
+	static const int identificator;
 public:
 	Railway() = default;
 	Railway(const string& name, const int colour,
@@ -10,19 +13,14 @@ public:
 	Railway(Railway&& railwayStation) = delete;
 
 	virtual void SetRent(const int* rent) override;
-	virtual void LayDown() override;
 	virtual void BuildHouse() override {};
 	virtual void DestroyHouse() override {};
 	virtual int GetAmountHouses() const override { return 0; };
 	virtual void ResetAmountOfHouses() override {};
-	Railway* GetRailway();
 	virtual int GetAmountProperties() const override;
 	virtual int GetIdentificator() const override;
 
 	const Railway* operator = (const Railway& railwayStation) = delete;
 	const Railway* operator = (Railway&& railwayStation) = delete;
-
-	static const int amountProperty;
-	static const int identificator;
 };
 

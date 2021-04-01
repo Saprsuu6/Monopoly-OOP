@@ -52,6 +52,14 @@ void Property::SetMaster(Player* player)
 	_master = player;
 }
 
+void Property::LayDown()
+{
+	if (!_isLaidDown)
+	{
+		_isLaidDown = true;
+	}
+}
+
 void Property::Redeem()
 {
 	if (_isLaidDown)
@@ -93,4 +101,9 @@ bool Property::GetIsLayDown() const
 Player* Property::GetMaster()
 {
 	return _master;
+}
+
+Property* Property::GetProperty()
+{
+	return this;
 }

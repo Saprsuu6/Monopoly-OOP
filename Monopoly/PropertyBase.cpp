@@ -23,7 +23,7 @@ void PropertyBase::CreateRailways()
 	WorkingFile work(path.c_str());
 	for (int i = 0; i < PropertyBase::amountRailway; i++)
 	{
-		work.SetProperty(_railwayArray[i].GetRailway());
+		work.SetProperty(_railwayArray[i].GetProperty());
 		work.SettingFromFile();
 	}
 }
@@ -34,7 +34,7 @@ void PropertyBase::CreateStreets()
 	WorkingFile work(path.c_str());
 	for (int i = 0; i < PropertyBase::amountStreets; i++)
 	{
-		work.SetProperty(_streetArray[i].GetStreet());
+		work.SetProperty(_streetArray[i].GetProperty());
 		work.SettingFromFile();
 	}
 }

@@ -26,6 +26,7 @@ public:
 	void SetCollateralValue(const int value);
 	void SetMaster(Player* player);
 
+	void LayDown();
 	void Redeem();
 	const string& GetName() const;
 	int GetPrice() const;
@@ -34,9 +35,9 @@ public:
 	const int* GetRent() const;
 	bool GetIsLayDown() const;
 	Player* GetMaster();
+	Property* GetProperty();
     
 	virtual void SetRent(const int* rent) = 0;
-	virtual void LayDown() = 0;
 	virtual void BuildHouse() = 0;
 	virtual void DestroyHouse() = 0;
 	virtual int GetAmountHouses() const = 0;
