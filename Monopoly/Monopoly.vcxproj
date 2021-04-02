@@ -136,11 +136,13 @@
     <ClCompile Include="WorkingFile.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BuilHouseOnRailways.h" />
     <ClInclude Include="ConsoleSettings.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerBase.h" />
+    <ClInclude Include="PlayerHaventStreets.h" />
     <ClInclude Include="Property.h" />
     <ClInclude Include="PropertyBase.h" />
     <ClInclude Include="Railway.h" />

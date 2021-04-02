@@ -10,6 +10,8 @@
 #include <fstream>
 using namespace std;
 
+#include "PlayerHaventStreets.h"
+#include "BuilHouseOnRailways.h"
 #include "TheSamePlayer.h"
 #include "SoMuchPlayers.h"
 

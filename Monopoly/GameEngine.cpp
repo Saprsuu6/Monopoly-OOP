@@ -25,25 +25,6 @@ GameEngine::~GameEngine()
 	delete _propertyBase;
 }
 
-void GameEngine::Load() 
-{
-	_settings.Cursor(55, 9);
-
-	cout << "Loading...";
-	setlocale(0, "C");
-
-	_settings.Cursor(41, 11);
-
-	for (int i = 0; i < 40; i++) {
-		int random = rand() % 100 + 50;
-		cout << char(219);
-		_settings.Cursor(41 + i, 11);
-		Sleep(random);
-	}
-
-	ClearScreen();
-}
-
 void GameEngine::Rules()
 {
 	system("mode con cols=88 lines=33");
@@ -223,6 +204,11 @@ void GameEngine::ShowingCard()
 	{
 		_show.ShowRailway(Colours::DarkWhite);
 	}
+}
+
+void GameEngine::PlayerHaventStreet() const
+{
+	throw PlayerHaventStreets();
 }
 
 bool GameEngine::StartMenu()
@@ -582,6 +568,21 @@ void GameEngine::ShowPlayersToDeal(bool& action)
 				if (select == 2 && player->AmountProperty() != 0)
 				{
 					ShowPlayerStreets(player);
+				}
+				else if (select == 2 && player->AmountProperty() == 0)
+				{
+					ClearScreen();
+					_settings.Cursor(0, 0);
+
+					try
+					{
+						PlayerHaventStreet();
+					}
+					catch (const PlayerHaventStreets& ex)
+					{
+						cout << ex.what() << endl;
+						Sleep(500);
+					}
 				}
 				else if (select == 3)
 				{

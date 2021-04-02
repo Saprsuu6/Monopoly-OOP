@@ -26,18 +26,18 @@ private:
 	void ShowingPlayer(Player* player);
 	void ShowingCard();
 	void ShowingPlayerActrions();
-	void ChekingForTheSameNick(const string& nick);
-	bool BumCheking(Player* player);
-	bool CheckingForLastPlayer();
-	void Actions(int& i);
-
 	void TextDeal();
 	void ShowPlayersToDeal(bool& action);
 	void ShowPlayerStreets(Player* player);
 	bool ShowMyStreets(const int propertyIndex, Player* player);
-	bool Deal(const int myPropertyIndex, const int PropertyIndex, Player* player);
-	int Select();
+	void ShowWinner(bool& temp);
+	void PlayerHaventStreet() const;
 
+	void ChekingForTheSameNick(const string& nick);
+	bool BumCheking(Player* player);
+	bool CheckingForLastPlayer();
+	void Actions(int& i);
+	bool Deal(const int myPropertyIndex, const int PropertyIndex, Player* player);
 	void ChekForAmountPlayers();
 	void Buying(bool& action);
 	void PayRent(bool& action);
@@ -48,18 +48,17 @@ private:
 	void DeletePlayer(bool& action, int& i);
 	void SkeepTurn(bool& action);
 	void ChecingForPrisoners();
-	void ShowWinner(bool& temp);
 	void Arest();
+	int Select();
 
 	GameEngine() = default;
 public:
 	~GameEngine();
 
-	void MusikStart();
-	void MusikEnd();
-	void Load();
 	bool StartMenu();
+	void MusikStart();
 	void Playing();
+	void MusikEnd();
 
 	static GameEngine* GetInstance();
 };

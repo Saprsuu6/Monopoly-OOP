@@ -89,5 +89,11 @@
     <ClInclude Include="TheSamePlayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BuilHouseOnRailways.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerHaventStreets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
