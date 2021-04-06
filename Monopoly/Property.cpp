@@ -9,11 +9,6 @@ Property::Property(const string& name, const int colour,
 	SetCollateralValue(collateralValue);
 }
 
-Property::~Property()
-{
-	delete[] _rent;
-}
-
 void Property::SetName(const string& name)
 {
 	if (name.find_first_not_of("AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz123456789 ")
@@ -50,6 +45,11 @@ void Property::SetCollateralValue(const int value)
 void Property::SetMaster(Player* player)
 {
 	_master = player;
+}
+
+Property::~Property()
+{
+	delete[] _rent;
 }
 
 void Property::LayDown()

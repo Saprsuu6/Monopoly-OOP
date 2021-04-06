@@ -21,27 +21,6 @@ void Railway::SetRent(const int* rent)
 	}
 }
 
-void Railway::BuildHouse()
-{
-	ShowExeption();
-}
-
-void Railway::DestroyHouse()
-{
-	ShowExeption();
-}
-
-int Railway::GetAmountHouses() const
-{
-	ShowExeption();
-	return 0;
-}
-
-void Railway::ResetAmountOfHouses()
-{
-	ShowExeption();
-}
-
 int Railway::GetAmountProperties() const
 {
 	return amountProperty;
@@ -50,19 +29,6 @@ int Railway::GetAmountProperties() const
 int Railway::GetIdentificator() const
 {
 	return identificator;
-}
-
-void Railway::ShowExeption() const
-{
-	try
-	{
-		throw HouseOnRailways();
-	}
-	catch (const HouseOnRailways& ex)
-	{
-		cout << ex.what() << endl;
-		Sleep(500);
-	}
 }
 
 const int Railway::amountProperty = 4;

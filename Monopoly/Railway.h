@@ -13,13 +13,12 @@ public:
 	Railway(Railway&& railwayStation) = delete;
 
 	virtual void SetRent(const int* rent) override;
-	virtual void BuildHouse() override;
-	virtual void DestroyHouse() override;
-	virtual int GetAmountHouses() const override;
-	virtual void ResetAmountOfHouses() override;
+	virtual void BuildHouse() override {};
+	virtual void DestroyHouse() override {};
+	virtual int GetAmountHouses() const override { return 0; };
+	virtual void ResetAmountOfHouses() override {};
 	virtual int GetAmountProperties() const override;
 	virtual int GetIdentificator() const override;
-	void ShowExeption() const;
 
 	const Railway* operator = (const Railway& railwayStation) = delete;
 	const Railway* operator = (Railway&& railwayStation) = delete;

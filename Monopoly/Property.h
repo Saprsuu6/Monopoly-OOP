@@ -18,13 +18,13 @@ public:
 		const int price, const int collateralValue);
 	Property(const Property& property) = delete;
 	Property(Property&& property) = delete;
-	~Property();
 
 	void SetName(const string& name);
 	void SetColour(const int colour);
 	void SetPrice(const int price) ;
 	void SetCollateralValue(const int value);
 	void SetMaster(Player* player);
+	virtual ~Property();
 
 	void LayDown();
 	void Redeem();
